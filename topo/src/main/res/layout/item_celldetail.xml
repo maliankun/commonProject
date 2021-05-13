@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/tv_itemname"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="移动公司"
+            android:gravity="center_vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/text_size_18sp"
+            android:textColor="@color/gray700"/>
+
+
+        <TextView
+            android:id="@+id/tv_itemvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:maxWidth="250dp"
+            android:maxLines="2"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="125345435663675678"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_18sp"
+            android:textColor="@color/gray700"/>
+    </RelativeLayout>
+
+</LinearLayout>

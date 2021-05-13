@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="50px" viewBox="0 0 46 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>otm</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="28.0021768%" y1="20.2680058%" x2="86.2430062%" y2="73.6510267%" id="linearGradient-1">
+            <stop stop-color="#21EAEF" offset="0%"></stop>
+            <stop stop-color="#2072E7" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#24C8B4" offset="0%"></stop>
+            <stop stop-color="#0156FB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="109.51837%" y1="45.1968997%" x2="50%" y2="50.7772818%" id="linearGradient-3">
+            <stop stop-color="#005A8B" offset="0%"></stop>
+            <stop stop-color="#176CCA" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-0.9%" y="-4.4%" width="101.9%" height="105.9%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="-0.5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0.0784313725   0 0 0 0 0.305882353   0 0 0 0 0.635294118  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <text id="text-5" font-family="AveriaSans-Regular, Averia Sans" font-size="12" font-weight="normal" fill="#FFFFFF">
+            <tspan x="11.828129" y="40.7438841">OTM</tspan>
+        </text>
+        <filter x="-0.5%" y="-5.8%" width="101.1%" height="107.7%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="-0.5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0.0782975062   0 0 0 0 0.307769356   0 0 0 0 0.6345929  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="otm" transform="translate(-6.000000, 0.000000)">
+            <g id="2-copy" transform="translate(5.000000, 0.000000)" fill-rule="nonzero">
+                <polygon id="Path-54-Copy-3" fill="url(#linearGradient-1)" points="1 4 40 12.4883557 39.3901618 50 1 40.662999"></polygon>
+                <polygon id="Path-55-Copy-3" fill="url(#linearGradient-2)" points="0.987262394 4.1432471 7.54462073 0 47 6.97201643 39.5087789 12.632307"></polygon>
+                <polygon id="Path-56-Copy-3" fill="url(#linearGradient-3)" points="39.5979191 12.0932944 39 50 47 42.7759424 47 7"></polygon>
+            </g>
+            <g id="2-copy-2" transform="translate(12.000000, 11.000000)">
+                <g id="Group-17-Copy-Copy" filter="url(#filter-4)" transform="translate(13.788422, 8.965965) rotate(2.000000) translate(-13.788422, -8.965965) translate(0.288422, 0.465965)">
+                    <ellipse id="Oval-7-Copy-2" stroke="#FFFFFF" stroke-width="2" cx="9.50662133" cy="5.0350695" rx="3.65639282" ry="3.59647821"></ellipse>
+                    <ellipse id="Oval-7-Copy-3" stroke="#FFFFFF" stroke-width="2" cx="17.5506855" cy="6.47366078" rx="3.65639282" ry="3.59647821"></ellipse>
+                    <polygon id="Combined-Shape" fill="#FFFFFF" fill-rule="nonzero" points="18.9906483 8.41488026 3.88654966 5.57058726 3.76853103 7.78561619 0.231991654 3.36788177 4.17302382 0.193906172 4.04626476 2.57297953 19.7202203 5.58837914 19.7218411 5.5820997 23.1166857 6.25511548 23.1166857 3.59647821 26.6731118 8.20125096 22.889903 11.8557701 22.889903 9.21879334 18.9891661 8.42062275"></polygon>
+                    <polygon id="Path-60-Copy-2" fill="#FFFFFF" fill-rule="nonzero" transform="translate(12.340424, 12.393127) rotate(4.000000) translate(-12.340424, -12.393127) " points="12.4434033 8.07735337 9.78094936 10.736411 11.7557954 10.736411 11.7557954 13.3389126 9.78094936 13.3389126 12.4434033 16.7089011 14.8998993 13.3389126 13.1743923 13.3389126 13.1743923 10.736411 14.8998993 10.736411"></polygon>
+                </g>
+            </g>
+            <g id="OTM" transform="translate(24.337895, 36.243884) rotate(12.000000) translate(-24.337895, -36.243884) " fill-opacity="1" fill="#FFFFFF">
+                <use filter="url(#filter-6)" xlink:href="#text-5"></use>
+                <use xlink:href="#text-5"></use>
+            </g>
+        </g>
+    </g>
+</svg>

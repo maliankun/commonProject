@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_a_device"
+        layout="@layout/layout_choose_type"></include>
+
+    <include
+        android:id="@+id/layout_a_card"
+        layout="@layout/layout_choose_type"></include>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="50dp"></View>
+
+    <include
+        android:id="@+id/layout_z_device"
+        layout="@layout/layout_choose_type"></include>
+
+    <include
+        android:id="@+id/layout_z_card"
+        layout="@layout/layout_choose_type"></include>
+
+    <Button
+        android:id="@+id/btn_choose_sure"
+        style="@style/common_button_style"
+        android:layout_marginTop="@dimen/dimens10"
+        android:text="确认选择" />
+</LinearLayout>

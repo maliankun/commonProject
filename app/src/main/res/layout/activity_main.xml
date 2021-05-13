@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/et_a_net"
+        android:layout_width="match_parent"
+        android:hint="A端网元"
+        android:text="22174102"
+        android:layout_height="wrap_content">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/et_a_port"
+        android:hint="A端端口"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/et_z_net"
+        android:hint="Z端网元"
+        android:text="341450178"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/et_z_port"
+        android:hint="Z端端口"
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="match_parent"
+        android:text="查询"
+        android:layout_height="wrap_content"></Button>
+
+</LinearLayout>

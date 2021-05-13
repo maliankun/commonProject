@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_left_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dimens10">
+
+    <TextView
+        style="@style/title_text_style"
+        android:text="路由列表" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclew_topo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

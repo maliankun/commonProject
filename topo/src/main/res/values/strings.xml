@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">topo</string>
+
+
+    <!--相关错误提示-->
+    <string name="error_password">账号或者密码错误</string>
+    <string name="error_request">网络请求失败，请重试</string>
+    <string name="error_data_empty">对不起，没有搜索到相关数据！</string>
+    <string name="error_userName_not_null">账号不能为空</string>
+    <string name="error_password_not_null">密码不能为空</string>
+    <string name="error_empty_data_request">数据为空</string>
+    <string name="error_map_no">暂无地图应用</string>
+    <string name="error_model_no_exsit">不存在这个模型或没有权限</string>
+    <string name="error_bad_request">请求参数或逻辑存在错误</string>
+    <string name="error_server_inner">服务出错，请联系管理员</string>
+    <string name="error_exception">操作出现异常</string>
+    <string name="error_cable_connect">获取关联光缆失败</string>
+
+    <string name="requesting">正在请求</string>
+    <string name="loading">加载中</string>
+    <string name="hint_exit">再按一次退出程序</string>
+    <string name="update_check">检查更新中</string>
+
+
+
+    <string name="room_olp_device">%1$s端机房OLP设备：</string>
+    <string name="room_olp_card">%1$s端槽位板卡：</string>
+
+    <string name="core_sites">核心站点</string>
+
+    <string name="union_sites">汇聚站点</string>
+    <string name="access_site">接入站点</string>
+    <string name="user_sites">用户站点</string>
+
+
+    <string-array name="array_site_type">
+        <item>@string/core_sites</item>
+        <item>@string/union_sites</item>
+        <item>@string/access_site</item>
+        <item>@string/user_sites</item>
+    </string-array>
+
+    <string name="trunk_light_post">主干光交</string>
+    <string name="wiring_light_post">配线光交</string>
+
+    <!--设备类型-->
+    <string name="community_light_post">小区光交</string>
+    <string name="township_light_post">乡镇光交</string>
+    <string name="optical_box">光分纤箱</string>
+    <string name="optical_terminal_box">光终端盒</string>
+    <string name="optical_interface_box">分歧接头</string>
+
+
+    <string-array name="array_device_type">
+        <item>@string/trunk_light_post</item>
+        <item>@string/wiring_light_post</item>
+        <item>@string/community_light_post</item>
+        <item>@string/township_light_post</item>
+        <item>@string/optical_box</item>
+        <item>@string/optical_terminal_box</item>
+        <item>@string/optical_interface_box</item>
+        <!--<item>@string/optical_interface_box</item>-->
+    </string-array>
+
+
+    <string name="pipeline_section">管道段</string>
+    <string name="pole_section">杆路段</string>
+    <string name="buried_section">直埋段</string>
+    <string name="wall_segment">挂墙段</string>
+
+    <string-array name="array_bearer_type">
+        <item>@string/pipeline_section</item>
+        <item>@string/pole_section</item>
+        <item>@string/buried_section</item>
+        <item>@string/wall_segment</item>
+    </string-array>
+
+    <string name="optical_cable_one">一干</string>
+    <string name="optical_cable_two">二干</string>
+    <string name="optical_cable_city_trunk">城域网主干</string>
+
+    <string name="optical_cable_city_union">城域网汇聚</string>
+    <string name="optical_cable_city_access">城域网接入</string>
+    <string name="optical_cable_special_access">集客专线接入</string>
+
+
+    <string-array name="array_optical_type">
+        <item>@string/optical_cable_one</item>
+        <item>@string/optical_cable_two</item>
+        <item>@string/optical_cable_city_trunk</item>
+        <item>@string/optical_cable_city_union</item>
+        <item>@string/optical_cable_city_access</item>
+        <item>@string/optical_cable_special_access</item>
+    </string-array>
+
+</resources>

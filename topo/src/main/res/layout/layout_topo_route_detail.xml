@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_start"
+        layout="@layout/item_route_az_point"></include>
+
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/layout_cable"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:padding="@dimen/dimens10">-->
+
+    <!--</LinearLayout>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_cable_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimens10" />
+
+    <include
+        android:id="@+id/layout_end"
+        layout="@layout/item_route_az_point"></include>
+</LinearLayout>

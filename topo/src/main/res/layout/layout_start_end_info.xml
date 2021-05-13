@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="@dimen/dimens10"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:textSize="@dimen/text_size_15sp"
+        android:id="@+id/tv_title"
+        android:text="起点"
+        style="@style/textview_title_desc" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dimens10"
+        style="@style/wmatch_hwrap">
+
+        <TextView
+            android:text="站点："
+            style="@style/textview_title_desc" />
+
+        <TextView
+            android:id="@+id/tv_site_name"
+            android:text="站点名称"
+            style="@style/title_text_style" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        style="@style/wmatch_hwrap">
+
+        <TextView
+            android:text="机房："
+            style="@style/textview_title_desc" />
+
+        <TextView
+            android:id="@+id/tv_room_name"
+            android:text="站点名称"
+            style="@style/title_text_style" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        style="@style/wmatch_hwrap">
+
+        <TextView
+            android:text="网元："
+            style="@style/textview_title_desc" />
+
+        <TextView
+            android:id="@+id/tv_ne_name"
+            android:text="网元名称"
+            style="@style/title_text_style" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_input_distance"
+        android:text="输入故障距离"
+        style="@style/common_button_style" />
+</LinearLayout>

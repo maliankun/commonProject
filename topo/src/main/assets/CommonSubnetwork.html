@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+    <title>逻辑拓扑图</title>
+	<link rel="stylesheet" href="file:///android_asset/static/js/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="file:///android_asset/static/css/style.css">
+	<link rel="stylesheet" href="file:///android_asset/static/css/attrStyle.css">
+    <style type="text/css">
+        body{
+            font-family: "Microsoft Yahei","Open Sans",Helvetica,Arial,sans-serif;
+            font-size: 2em;
+        }
+        .dialog{
+            max-width: 400px;
+            max-height: 165px;
+            border: 1px solid #8E8E8F;
+            overflow: auto;
+            border-radius: 10px;
+            box-shadow: 4px 4px 3px rgba(20%,20%,40%,0.5);
+            position: absolute;
+            background-color: white;
+        }
+        .table2{
+            border: 1px solid #BEBEBE;
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 90%;
+            text-align: right;
+        }
+        .table1{
+             margin: 0 5px 0 5px;
+            width: 200px;
+        }
+        
+        .table2 。tr{
+            border: 1px solid #BEBEBE;
+            height:16px;
+        }
+        .table3{
+             margin: 0 5px 0 5px;
+            width: 20em;
+        }
+        .table3 .td1{
+            text-align: right;
+            width: 100%;
+        }
+        tr{
+        	border: 1px solid #BEBEBE;
+            height:16px;
+        }
+        td{
+            font-family:'Calibri', 'Open Sans',sans-serif;
+            font-size: 11px;
+        }
+        .table1 .td1{
+            text-align: right;
+            width: 50%;
+        }
+        .td1{
+            color: #E09E00;
+        }
+        #dialogHeader{
+            width: 100%;
+            height: 20px;
+            margin-top: 5px;
+            font-family:'Open Sans',sans-serif;
+            font-size: 12px;
+        }
+        #titleImg{
+            width: 12px;
+            height: 12px;
+            margin: 0 5px 0 5px;
+        }
+        .btn-group{
+            position: absolute;
+            top: 10px;
+            right: 60px;
+            z-index: 999;
+        }
+        .btn-group input{
+            margin-left: 10px;
+        }
+        .addSNdialog{
+            position: fixed;
+			z-index: 999;
+			width: 100%;
+			height: 100%;
+			display: none;
+			text-align: center;
+			background-color: #000;
+			opacity: 0.8;
+        }
+        .addSNdialogBody {
+			position: relative;
+			border-radius: 10px;
+			top: 25%;
+			width: 400px;
+			display: inline-block;
+			height: 300px;
+			background-color: white;
+		}
+        .neRelatedSNdialog{
+            position: fixed;
+			z-index: 999;
+			width: 100%;
+			height: 100%;
+			display: none;
+			text-align: center;
+			background-color: #000;
+			opacity: 0.8;
+        }
+        .neRelatedSNdialogBody {
+			position: relative;
+			border-radius: 10px;
+			top: 25%;
+			width: 600px;
+			display: inline-block;
+			height: 300px;
+			background-color: white;
+		}
+		.btnBody {
+			position: relative;
+			width: 400px;
+			height: 70px;
+		}
+		.loader {
+			  border: 8px solid #f3f3f3;
+			  border-radius: 50%;
+			  border-top: 8px solid #bfbfbf;
+			  border-right: 8px solid #bfbfbf;
+			  border-bottom: 8px solid #cdcdcd;
+			  border-left: 8px solid #cdcdcd;
+			  width: 40px;
+			  height: 40px;
+			  -webkit-animation: spin 2s linear infinite;
+			  animation: spin 2s linear infinite;
+			  position: absolute; 
+			  top: 0; 
+			  left: 0;
+			  right: 0;
+			  bottom: 0;
+			  margin: auto; 
+			}
+			
+			@-webkit-keyframes spin {
+			  0% { -webkit-transform: rotate(0deg); }
+			  100% { -webkit-transform: rotate(360deg); }
+			}
+			
+			@keyframes spin {
+			  0% { transform: rotate(0deg); }
+			  100% { transform: rotate(360deg); }
+			}
+    </style>
+	<script>
+        var city_id= toPodata.getCity_id();
+        var ems_id= toPodata.getEms_id();
+        var county_id= toPodata.getCounty_id();
+        var subnet_id= toPodata.getSubnet_id();
+        var subnet_type= toPodata.getSubnet_type();
+        var serverUrl ="http://218.207.69.236:6105/devicetopo";
+        //var aNeId ="1558619973";
+        //var zNeId="1503746476";
+        var aNeId = toPodata.getaNeId();
+        var zNeId = toPodata.getzNeid();
+        //alert("goodsid=="+emsId);
+    </script>
+	<script type="text/javascript" src="file:///android_asset/static/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="file:///android_asset/static/lib/twaver.js"></script>
+	<script type="text/javascript" src="file:///android_asset/static/js/image.js"></script>
+	<script type="text/javascript" src="file:///android_asset/static/js/TopoImages.js"></script>
+	<script type="text/javascript" src="file:///android_asset/static/js/Util.js"></script>
+	<script type="text/javascript" src="file:///android_asset/static/demo.js"></script>
+	<script type="text/javascript" src="file:///android_asset/static/CommonSubnetwork.js"></script>
+    <script type="text/javascript">
+        var pcSubnetwork = new PCSubnetwork();
+        function showCityRsgSubnet(city_id,ems_id) {
+        	pcSubnetwork.showCityRsgSubnetA(city_id,ems_id);
+        }
+        function addSNSubmit() {
+        	var snName=document.getElementById('subnet_name').value;
+
+        	if (snName==null || snName=="") {
+        		alert("子网名称为不能为空！");
+        		return;
+        	} else {
+        		pcSubnetwork.addSNSubmitA(snName);
+        	}
+        }
+        function hideAddSNDialog() {
+        	var addSNdiv = document.getElementById('addSNdiv');
+			addSNdiv.style.display= 'none';
+        }
+        //隐藏关联子网页面
+        function hideNeRelatedSNDialog() {
+        	var neRelatedSNdiv = document.getElementById('neRelatedSNdiv');
+        	neRelatedSNdiv.style.display= 'none';
+        }
+        function neRelatedSNSubmit() {
+        	var ne_name = document.getElementById('ne_name').value;
+        	var ne_id = document.getElementById('ne_id').value;
+        	var related_subnet_select = document.getElementById('related_subnet_select').value;
+        	var related_type = document.getElementById('related_type').value;
+        	pcSubnetwork.neRelatedSNSubmitA(ne_id,ne_name,related_type,related_subnet_select);
+        }
+        
+        function showDeviceInfo(ne_id){
+        	window.location.href="./nePanel?ne_id="+ne_id;
+        	//toPodata.toNePage(ne_id);
+        }
+    </script>
+</head>
+<body onload="pcSubnetwork.init()">
+    <div id='loaddiv' style = 'display:none;position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;z-index:100;background-color:rgba(0,0,0,0.5);'>
+       <div class="loader"></div>
+    </div>
+
+    <div id='main' style = 'width:100%;height:100%'>
+    </div>
+    <!-- 详情展示窗口 -->
+    <div id="detaildiv" class="dialog" style="display: none;">
+    	<div id='dialogHeader'>
+    		<img id='titleImg'></img>
+    		<b><label id='titleTxt'></label></b>
+    	</div>
+    	<div id='dialogBody'></div>
+    </div>
+    <!-- 新增子网窗口 -->
+    <div id="addSNdiv" class="addSNdialog" style="display: none;">
+    	<div id='addSNdialogBody' class='addSNdialogBody'>
+    	<b><label>新增子网</label></b>
+    	<br>
+    	<br>
+    	<br>
+    		<table>
+    			<tr><th>子网名称：</th><td><input type='text' id='subnet_name' /></td></tr>
+    			<tr><th>所属子网：</th><td><input type='text' id='related_subnet_name' readonly="true"/></td></tr>
+    		</table>
+    		<br>
+    		<table width="100%" >
+    			<tr><td><button id="submitBtn" onclick="addSNSubmit()">确认</button></td><td><button id="cancelBtn" onclick="hideAddSNDialog()">取消</button></td></tr>
+    		</table>
+    	</div>
+    </div>
+    <!-- 网元与子网对应关系修改 -->
+    <div id="neRelatedSNdiv" class="neRelatedSNdialog" style="display: none;">
+    	<div id='neRelatedSNdialogBody' class='neRelatedSNdialogBody'>
+    	<b><label>网元关联子网</label></b>
+    	<br>
+    	<br>
+    	<br>
+    		<table>
+    			<tr><th width="100px">子网/网元名称：</th><td width="400px" ><input style="width:100%" type='text' id='ne_name' readonly="true"/>
+    			<input style="width:100%" type='hidden' id='ne_id'/></td></tr>
+    			<tr>
+    				<th width="100px">关联类型：</th>
+    				<td width="400px">
+    					<select style="width:100%" id="related_type">
+    						<option value="3">唯一关联</option>
+    						<option value="4">复选关联</option>
+    					</select>
+    				</td>
+    			</tr>
+    			<tr>
+    				<th width="100px">所属子网：</th>
+    				<td width="400px">
+    					<select style="width:400px" id="related_subnet_select" name="related_type">
+    					</select>
+    				</td>
+    			</tr>
+    		</table>
+    		<br>
+    		<table width="100%" >
+    			<tr><td><button onclick="neRelatedSNSubmit()">确认</button></td><td><button onclick="hideNeRelatedSNDialog()">取消</button></td></tr>
+    		</table>
+    	</div>
+    </div>
+</body>
+</html>

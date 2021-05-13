@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="wmatch_hwrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="wwrap_hmatch">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="wwrap_hwrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="map_button_card" parent="wwrap_hwrap">
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+
+    <style name="title_text_style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">#100F0E</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="textview_title_txt">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+        <item name="android:textColor">@color/fontTitle</item>
+    </style>
+
+    <style name="textview_title_desc">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+        <item name="android:textColor">@color/fontDesc</item>
+    </style>
+
+    <style name="map_button_linear" parent="wwrap_hwrap">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingRight">3dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+    <style name="map_button_imageview" parent="wwrap_hwrap">
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+
+    <style name="map_button_text" parent="wwrap_hwrap">
+        <item name="android:textColor">@color/color_item_search_type</item>
+        <item name="android:textSize">@dimen/text_size_10sp</item>
+        <!--android:textColor="@color/color_item_search_type"-->
+        <!--android:textSize="8sp"-->
+    </style>
+
+    <style name="common_button_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_button_common</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TabLayoutText">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+</resources>

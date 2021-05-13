@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_toolbar"></include>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+
+    <WebView
+        android:id="@+id/wvCon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <TextView
+        android:layout_margin="5dp"
+        android:id="@+id/tv_noSubnet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="没有找到子网信息，请确认网元是否正确"
+        android:textSize="@dimen/text_size_16sp"
+        android:textColor="@color/cardview_dark_background"/>
+
+</LinearLayout>

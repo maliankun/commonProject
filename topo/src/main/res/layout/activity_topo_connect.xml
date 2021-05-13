@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_coordinator_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/main_drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/main_content_frame_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/layout_toolbar"></include>
+
+            <com.amap.api.maps.MapView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="60dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="13dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_topo"
+                    style="@style/title_text_style"
+                    android:layout_marginTop="100dp"
+                    app:cardElevation="@dimen/card_elevation">
+
+                    <LinearLayout
+                        style="@style/map_button_linear"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_legend"
+                            style="@style/map_button_imageview"
+                            android:src="@drawable/ic_layers" />
+
+                        <TextView
+
+                            style="@style/map_button_text"
+                            android:text="拓扑" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_router"
+                    style="@style/map_button_card"
+                    android:layout_below="@+id/card_topo"
+                    android:layout_marginTop="@dimen/dimens5"
+                    android:visibility="gone"
+                    app:cardElevation="@dimen/card_elevation">
+
+                    <LinearLayout style="@style/map_button_linear">
+
+                        <ImageView
+                            style="@style/map_button_imageview"
+                            android:src="@drawable/ic_layers" />
+
+                        <TextView
+                            style="@style/map_button_text"
+                            android:text="路由" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/location"
+                    style="@style/wwrap_hwrap"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardMaxElevation="@dimen/card_elevation">
+
+                    <ImageView
+                        style="@style/wwrap_hwrap"
+                        android:padding="@dimen/dimens5"
+                        android:src="@drawable/ic_my_location" />
+                </android.support.v7.widget.CardView>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <!-- 右侧滑动栏 -->
+        <!--<include layout="@layout/layout_router_list"></include>-->
+
+        <include layout="@layout/layout_topo_list"></include>
+    </android.support.v4.widget.DrawerLayout>
+
+    <FrameLayout
+        android:id="@+id/route_start_end"
+        android:background="@color/white"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="200dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <include layout="@layout/layout_start_end_info" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/route_detail_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:clickable="true"
+        android:translationZ="5dp"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="200dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_detail"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/title_bg_collor"
+                android:gravity="left"
+                app:layout_scrollFlags="enterAlwaysCollapsed"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:titleTextAppearance="@style/Toolbar.TitleText"></android.support.v7.widget.Toolbar>
+
+            <FrameLayout
+                android:id="@+id/framelayout_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="50dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coord_router_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@color/white">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@color/title_bg_collor"
+                    android:gravity="left"
+                    app:layout_scrollFlags="enterAlwaysCollapsed"
+                    app:popupTheme="@style/AppTheme.PopupOverlay"
+                    app:titleTextAppearance="@style/Toolbar.TitleText">
+
+                    <TextView
+                        android:id="@+id/title_right"
+                        style="@style/title_text_style"
+                        android:layout_gravity="left"
+                        android:singleLine="false"
+                        android:textSize="@dimen/text_size_14sp"
+                        tools:text="首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页" />
+
+                </android.support.v7.widget.Toolbar>
+
+                <!--                <android.support.design.widget.TabLayout-->
+                <!--                    android:id="@+id/tab_layout"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="40dp"-->
+                <!--                    app:tabBackground="@color/white"-->
+                <!--                    app:tabIndicatorColor="@color/colorAccent"-->
+                <!--                    app:tabSelectedTextColor="@color/title_color"-->
+                <!--                    app:tabTextAppearance="@style/TabLayoutText"-->
+                <!--                    app:tabTextColor="@color/title_color" />-->
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        </android.support.design.widget.CoordinatorLayout>
+
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

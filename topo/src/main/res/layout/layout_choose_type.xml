@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dimens5"
+    android:layout_marginTop="@dimen/dimens5"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_content_desc"
+        style="@style/textview_title_desc"
+        android:layout_width="140dp"
+        android:layout_marginRight="@dimen/dimens10"
+        android:gravity="right"
+        android:text="A端机房OLP设备" />
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_choose"
+        android:padding="@dimen/dimens5">
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/textview_title_txt"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/dimens18"
+            tools:text="测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:src="@drawable/ic_arrow_down" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+.scrollbar{
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 100%;
+}
+/*��������ʽ*/
+.scrollbar::-webkit-scrollbar {/*������������ʽ*/
+    width: 10px;     /*�߿�ֱ��Ӧ�����������ĳߴ�*/
+    height: 10px;
+}
+.scrollbar::-webkit-scrollbar-thumb {/*����������С����*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+    background: rgb(14, 81, 166);
+}
+.scrollbar::-webkit-scrollbar-track {/*������������*/
+    -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(5, 17, 44, 0.96);
+}
+/**
+*点击网元显示弹窗的样式
+ */
+.dialog{
+    width: 240px;
+    height: 130px;
+    border: 1px solid #8E8E8F;
+    border-radius: 10px;
+    box-shadow: 4px 4px 3px rgba(20%,20%,40%,0.5);
+    position: absolute;
+    background-color: white;
+}
+.table2{
+    border: 1px solid #BEBEBE;
+    margin-left: 5px;
+    width: 95%;
+    text-align: left;
+}
+.table1{
+    margin: 0 5px 0 5px;
+    width: 200px;
+}
+tr{
+    height:16px;
+}
+td{
+    font-family:'Calibri', 'Open Sans',sans-serif;
+    font-size: 11px;
+}
+.table1 .td1{
+    text-align: left;
+    width: 50%;
+}
+.td1{
+    color: #E09E00;
+}
+#dialogHeader{
+    width: 100%;
+    height: 20px;
+    margin-top: 5px;
+    font-family:'Open Sans',sans-serif;
+    font-size: 12px;
+}
+#titleImg{
+    width: 12px;
+    height: 12px;
+    margin: 0 5px 0 5px;
+}
+.btn-group{
+    position: absolute;
+    top: 10px;
+    right: 60px;
+    z-index: 999;
+}
+.btn-group input{
+    margin-left: 10px;
+}

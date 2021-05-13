@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="fontTitle">#464c5b</color>
+    <color name="fontDesc">#657180</color>
+    <color name="red">#FF0000</color>
+    <color name="color_dot_line">#545850</color>
+    <color name="green_normal">#37C000</color>
+    <color name="color_item_search_type">#555451</color>
+    <color name="white">#FFFFFF</color>
+    <color name="title_bg_collor">#F9F8F7</color>
+
+
+    <color name="color_text_grey">#94928C</color>
+
+    <color name="colorAccentDark">#FFCE800D</color>
+    <color name="colorAccent">#FFA013</color>
+
+    <color name="color_border">#BEBBB5</color>
+
+    <color name="title_color">#100F0E</color>
+    <color name="gray700">#616161</color>
+    <color name="gray_200">#eeeeee</color>
+
+    <color name="cable_one">#C83415</color>
+    <color name="cable_two">#C83415</color>
+    <color name="cable_city_trunk">#08942B</color>
+    <color name="cable_city_union">#4381C2</color>
+    <color name="cable_city_access">#8A8A8A</color>
+    <color name="cable_city_access_special">#8A8A8A</color>
+
+    <color name="segment_pipe">#6678CF</color>
+    <color name="segment_ganlu">#796A10</color>
+    <color name="segment_buried">#6678CF</color>
+    <color name="segment_wall">#796A10</color>
+
+
+</resources>

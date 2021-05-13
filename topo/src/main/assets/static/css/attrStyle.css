@@ -1,0 +1,67 @@
+
+body { font-size: 12px; }
+#attrbar select { font-size: 10px; }
+#attrbar fieldset { padding:0; border:0; margin-top:10px; }
+.ui-dialog .ui-state-error { padding: .3em; }
+.item{
+    height: 40px;
+    line-height: 20px;
+    margin: 2px;
+    display:block;
+}
+
+.item .item-label{
+    font-weight:bold;
+    color:#055EDC;
+    float: left;
+    width: 140px;
+    text-align: right;
+    display:block;
+    margin-bottom:10px;
+    padding-right: 10px;
+}
+
+
+.item-input{
+    color:#ffffff;
+    float: left;
+    margin-bottom:3px;
+    width:60%;
+    text-align: left;
+    padding: .4em;
+    display:block;
+}
+.item-input-add{
+    float: left;
+    margin-top:10px;
+    /*margin-bottom:0px;*/
+    margin-right: 5px;
+    width: 260px;
+    /*padding: .4em;*/
+    display:block;
+}
+
+.item-button{
+    float: left;
+    margin-top:7px;
+    margin-left: 2px;
+    width: 40px;
+    height: 20px;
+    /*padding: .4em;*/
+    display:block;
+}
+
+/*label.error{*/
+/*float: left;*/
+/*height: 10px;*/
+/*line-height: 10px;*/
+/*font-size: 14px;*/
+/*text-align: left;*/
+/*padding-left: 70px;*/
+/*color: red;*/
+
+/*}*/
+label.error{
+    color: red;
+
+}

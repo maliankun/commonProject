@@ -1,0 +1,144 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'//添加
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.0"
+
+
+    defaultConfig {
+        minSdkVersion 18
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+        incremental false
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+
+    signingConfigs {
+
+        release {
+            storeFile file("../inspur.osp.jks")
+            storePassword "inspur"
+            keyAlias "inspur.osp"
+            keyPassword "inspur"
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+//    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+//    api files('libs/AMap_Location_V4.6.0_20190423.jar')
+
+    api 'com.android.support:appcompat-v7:28.0.0'
+    api 'com.android.support:recyclerview-v7:28.0.0'
+    api 'com.android.support:support-v4:28.0.0'
+    api 'com.android.support:design:28.0.0'
+    api 'com.android.support:cardview-v7:28.0.0'
+
+    api 'com.cocoahero.android:geojson:1.0.1@jar'
+
+    //3D地图so及jar
+    api 'com.amap.api:3dmap:6.4.0'
+    //定位功能
+//    api 'com.amap.api:location:4.6.0'
+    //搜索功能
+//    api 'com.amap.api:search:latest.integration'
+
+//    api 'com.jakewharton:butterknife:8.8.1'
+//    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    api 'io.reactivex.rxjava2:rxjava:2.1.8'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    api 'com.zhy:base-rvadapter:3.0.3'
+
+    api 'com.squareup.retrofit2:retrofit:2.3.0'
+    api 'com.squareup.retrofit2:converter-gson:2.3.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+
+
+//    api 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+
+
+
+//    api 'com.jakewharton.timber:timber:4.5.1'
+//
+//    api 'com.facebook.stetho:stetho:1.5.0'
+//    api 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+
+}
+
+
+//生成源文件
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+//生成Javadoc文档
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+//文档打包成jar
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+//拷贝javadoc文件
+task copyDoc(type: Copy) {
+    from "${buildDir}/docs/"
+    into "docs"
+}
+
+//上传到JCenter所需要的源码文件
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+//解决 JavaDoc 中文注释生成失败的问题
+tasks.withType(Javadoc) {
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
+}
+
+
+//发布到 Bintray
+publish {
+
+    //userOrg = 'liuchen1215'           //bintray.com 注册的用户名
+    userOrg = 'liyakun'           //bintray.com 注册的用户名
+    groupId = 'com.inspur.topo'   //以后访问 jcenter上此项目的路径，一般和库项目的包名一致
+    //artifactId = 'topo'       //bintray.com 创建的 Package 名
+    artifactId = 'logictopo'       //bintray.com 创建的 Package 名
+    publishVersion = '1.0.7'         //版本号
+    desc = '这是一个不认真的版本说明' //版本说明，随意
+    website = 'https://github.com/DRPrincess/DR_MavenDemo'    //关于这个开源项目的网站，随意
+}
